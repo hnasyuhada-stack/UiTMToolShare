@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F8FA"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/editItemTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Item"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="#222"
+            android:layout_marginBottom="18dp"
+            android:layout_gravity="center"/>
+
+        <!-- Item image preview -->
+        <ImageView
+            android:id="@+id/editItemImage"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Item Image"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Gallery and Camera buttons -->
+        <LinearLayout
+            android:id="@+id/imageButtonRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="18dp">
+
+            <Button
+                android:id="@+id/buttonChooseImage"
+                android:backgroundTint="#3F51B5"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Choose from Gallery"/>
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/buttonCaptureImage"
+                android:backgroundTint="#3F51B5"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Capture Image"/>
+        </LinearLayout>
+
+        <!-- Item Name -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Item Name"
+            android:textColor="#444"
+            android:textStyle="bold"
+            android:layout_marginBottom="2dp"/>
+        <EditText
+            android:id="@+id/editItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter item name"
+            android:inputType="textCapWords"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Category -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textColor="#444"
+            android:textStyle="bold"
+            android:layout_marginBottom="2dp"/>
+        <EditText
+            android:id="@+id/editItemCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Eg: Tools, Electronics"
+            android:inputType="textCapWords"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Description -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textColor="#444"
+            android:textStyle="bold"
+            android:layout_marginBottom="2dp"/>
+        <EditText
+            android:id="@+id/editItemDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:inputType="textMultiLine"
+            android:minLines="2"
+            android:maxLines="4"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Condition -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Condition"
+            android:textColor="#444"
+            android:textStyle="bold"
+            android:layout_marginBottom="2dp"/>
+        <EditText
+            android:id="@+id/editItemCondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Eg: New, Used"
+            android:inputType="textCapWords"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Location -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textColor="#444"
+            android:textStyle="bold"
+            android:layout_marginBottom="2dp"/>
+        <EditText
+            android:id="@+id/editItemLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Location"
+            android:inputType="text"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Type selection -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Type"
+            android:textColor="#444"
+            android:textStyle="bold"
+            android:layout_marginBottom="2dp"/>
+        <RadioGroup
+            android:id="@+id/typeRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+            <RadioButton
+                android:id="@+id/typeShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share"
+                android:textColor="#333"/>
+            <RadioButton
+                android:id="@+id/typeRent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rent"
+                android:textColor="#333"
+                android:layout_marginStart="18dp"/>
+            <RadioButton
+                android:id="@+id/typeSell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sell/Swap"
+                android:textColor="#333"
+                android:layout_marginStart="18dp"/>
+        </RadioGroup>
+
+        <!-- Price section (label + field, both hidden initially) -->
+        <TextView
+            android:id="@+id/labelEditPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price (RM)"
+            android:textColor="#444"
+            android:textStyle="bold"
+            android:layout_marginBottom="2dp"
+            android:visibility="gone"/>
+        <EditText
+            android:id="@+id/editItemPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter price (only for Rent/Sell)"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="18dp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/updateItemButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Item"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:backgroundTint="#49BE6E"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

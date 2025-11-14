@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F8FA"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="32dp">
+
+    <!-- Optional: App icon or QR illustration -->
+    <ImageView
+        android:id="@+id/qrIcon"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="38dp"
+        android:src="@drawable/ic_qr"
+    android:contentDescription="QR code illustration" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan QR Code"
+
+        android:textColor="#222"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_marginBottom="18dp"/>
+
+    <!-- Scan with Camera Button -->
+    <Button
+        android:id="@+id/buttonScanCamera"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Scan with Camera"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="#FFF"
+        android:backgroundTint="#3F51B5"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Select QR from Gallery Button -->
+    <Button
+        android:id="@+id/buttonSelectImage"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Select QR from Gallery"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="#FFF"
+        android:backgroundTint="#49BE6E"/>
+
+    <!-- (Optional) Hint or tip -->
+    <TextView
+        android:id="@+id/textHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You can scan directly or pick a saved QR image."
+        android:textColor="#888"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginTop="24dp"/>
+
+</LinearLayout>

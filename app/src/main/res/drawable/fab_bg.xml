@@ -1,0 +1,7 @@
+<!-- res/drawable/fab_bg.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="#FFFFFF"/>
+    <corners android:radius="28dp"/>
+    <elevation android:shadowColor="#66000000" android:height="8dp"/>
+</shape>

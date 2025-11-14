@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <!-- Title -->
+    <TextView
+        android:text="Filter Options"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="18dp"/>
+
+    <!-- Price Range -->
+    <TextView
+        android:text="Price Range (RM)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <SeekBar
+        android:id="@+id/seekBarPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="500"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/textPriceValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Up to RM500"
+        android:layout_marginBottom="18dp"
+        android:layout_gravity="end"/>
+
+    <!-- Location -->
+    <TextView
+        android:text="Location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/editLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter location"
+        android:layout_marginBottom="18dp"/>
+
+    <!-- Type: Share, Rent, Sell -->
+    <TextView
+        android:text="Type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <RadioGroup
+        android:id="@+id/radioType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="22dp">
+
+        <RadioButton
+            android:id="@+id/typeShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share"/>
+        <RadioButton
+            android:id="@+id/typeRent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rent"
+            android:layout_marginStart="28dp"/>
+        <RadioButton
+            android:id="@+id/typeSell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sell"
+            android:layout_marginStart="28dp"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonApplyFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apply Filter"
+        android:backgroundTint="#49BE6E"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Reset Button -->
+    <Button
+        android:id="@+id/buttonResetFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:backgroundTint="#E0E0E0"
+        android:textColor="#444"
+        android:textAllCaps="false"
+        android:layout_marginTop="8dp"/>
+</LinearLayout>

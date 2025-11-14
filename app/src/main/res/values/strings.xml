@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ToolShare</string>
+    <string-array name="item_filters">
+        <item>My Items</item>
+        <item>Borrowed by Me</item>
+        <item>Lent Out by Me</item>
+        <item>Purchased by Me</item>
+        <item>All Items</item>
+    </string-array>
+
+</resources>

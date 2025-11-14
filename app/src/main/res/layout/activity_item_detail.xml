@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:flexbox="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F8FA">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <!-- Main Image -->
+            <ImageView
+                android:id="@+id/detailImage"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:src="@drawable/placeholder"
+                android:layout_marginBottom="14dp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <!-- Name -->
+            <TextView
+                android:id="@+id/detailName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="#232323"
+                android:paddingBottom="2dp"/>
+
+            <!-- Category -->
+            <TextView
+                android:id="@+id/detailCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#666"
+                android:textStyle="italic"
+                android:paddingBottom="4dp"/>
+
+            <!-- Chips for Type, Price, Status (Flexbox for wrapping) -->
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/chipRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                flexbox:flexDirection="row"
+                flexbox:justifyContent="flex_start"
+                flexbox:alignItems="center"
+                flexbox:flexWrap="wrap"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="10dp">
+
+                <!-- Type Chip -->
+                <TextView
+                    android:id="@+id/detailType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/chip_type"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:text="Type: Rent"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"/>
+
+                <!-- Price Chip -->
+                <TextView
+                    android:id="@+id/detailPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/chip_price"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:text="Price: RM52"
+                    android:textSize="15sp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:visibility="gone"/>
+
+                <!-- Status Chip -->
+                <TextView
+                    android:id="@+id/detailStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/chip_status_available"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:text="Status: available"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"/>
+            </com.google.android.flexbox.FlexboxLayout>
+
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/detailDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#222"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:paddingTop="4dp"
+                android:textStyle="normal"/>
+
+            <!-- Condition -->
+            <TextView
+                android:id="@+id/detailCondition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:paddingTop="2dp"
+                android:textColor="#222"/>
+
+            <!-- Location -->
+            <TextView
+                android:id="@+id/detailLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:paddingTop="2dp"
+                android:textColor="#222"/>
+
+            <!-- WhatsApp Contact Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="2dp">
+
+                <TextView
+                    android:id="@+id/phoneText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Phone Number"
+                    android:textSize="16sp"
+                    android:textColor="#232323"/>
+
+                <ImageView
+                    android:id="@+id/whatsappIcon"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:src="@drawable/ic_whatsapp"
+                    android:background="@drawable/whatsapp_icon_bg"
+                    android:contentDescription="Chat on WhatsApp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:visibility="gone"
+                    android:padding="7dp"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- Owner-only buttons -->
+            <Button
+                android:id="@+id/editItemButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Edit Item"
+                android:layout_marginTop="18dp"
+                android:visibility="gone"
+                android:backgroundTint="#388E3C"
+                android:textColor="#fff"
+                android:textAllCaps="false"
+                android:elevation="1dp"/>
+
+
+            <Button
+                android:id="@+id/qrItemButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Show QR Code"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:textAllCaps="false"
+                android:elevation="1dp"/>
+
+            <!-- Map View Button -->
+            <Button
+                android:id="@+id/viewMapButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Map"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:backgroundTint="#6958b5"
+                android:textColor="#fff"
+                android:elevation="1dp"/>
+
+            <Button
+                android:id="@+id/deleteItemButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Delete Item"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:textColor="@android:color/white"
+                android:textAllCaps="false"
+                android:elevation="1dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

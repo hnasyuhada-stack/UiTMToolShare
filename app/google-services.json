@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "806838819070",
+    "project_id": "uitmtools",
+    "storage_bucket": "uitmtools.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806838819070:android:188f031e6ac2729f2f6daf",
+        "android_client_info": {
+          "package_name": "com.example.uitmtoolshare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWBDsUuKAC4yT6P_qaIXOutzWEw9HgxFw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
