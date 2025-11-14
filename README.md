@@ -32,5 +32,3 @@ The app aims to reduce student costs, encourage sustainability, and provide a se
 - OpenStreetMap (GPS & map features)
 
 ---
-
-## Project Structure
